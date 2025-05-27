@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AQX Capital - Performance Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d1117;
+      font-family: 'Inter', sans-serif;
+      color: #f0f0f0;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #161b22;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 255, 136, 0.1);
+      padding: 30px;
+      border: 1px solid #30363d;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #aaa;
+    }
+
+    canvas {
+      width: 100% !important;
+      max-height: 500px;
+    }
+
+    .chart-wrapper {
+      position: relative;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AQX Capital</h1>
+    <p>Rentabilidad del Fondo - Estilo Profesional</p>
+    <div class="chart-wrapper">
+      <canvas id="tvChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('tvChart').getContext('2d');
+    const tvChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago'],
+        datasets: [{
+          label: 'Rentabilidad (%)',
+          data: [0, 1.2, 2.8, 4.6, 6.3, 8.5, 10.9, 13.2],
+          borderColor: '#00ff88',
+          borderWidth: 2,
+          pointRadius: 0,
+          tension: 0.4,
+          fill: {
+            target: 'origin',
+            above: 'rgba(0, 255, 136, 0.05)'
+          }
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { labels: { color: '#fff' } },
+          tooltip: {
+            backgroundColor: '#1f2937',
+            borderColor: '#00ff88',
+            borderWidth: 1,
+            titleColor: '#00ff88',
+            bodyColor: '#f0f0f0',
+            cornerRadius: 4
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#ccc' },
+            grid: { color: '#222' }
+          },
+          y: {
+            ticks: { color: '#ccc' },
+            grid: { color: '#222' }
+          }
+        },
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+</body>
+</html>
