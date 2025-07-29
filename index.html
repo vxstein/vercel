@@ -43,6 +43,10 @@
 
     form {
       margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
     }
 
     input[type="email"] {
@@ -50,9 +54,8 @@
       border-radius: 6px;
       border: none;
       outline: none;
-      width: 250px;
+      width: 280px;
       font-size: 1rem;
-      margin-right: 10px;
       background-color: #1a1f2b;
       color: white;
     }
@@ -85,19 +88,8 @@
     }
 
     @media (max-width: 600px) {
-      input[type="email"] {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-
-      button {
-        width: 100%;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      input[type="email"], button {
+        width: 90%;
       }
     }
   </style>
@@ -120,6 +112,7 @@
 
 </body>
 </html>
+
 
 
 
