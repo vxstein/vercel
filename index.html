@@ -3,115 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AQX Capital - Sitio en Construcción</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <title>AQX Capital</title>
   <style>
     body {
       margin: 0;
-      background-color: #0b0f1a;
-      color: #e0e0e0;
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    .logo {
-      font-size: 2.8rem;
-      font-weight: 600;
-      color: #00ff9d;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      color: #a0a0a0;
-      margin-bottom: 40px;
-    }
-
-    .notice {
-      font-size: 1rem;
-      color: #cccccc;
-      margin-bottom: 30px;
-      max-width: 600px;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0f1116;
+      color: #f1f1f1;
       line-height: 1.6;
     }
-
-    form {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
+    header {
+      background: #12141a;
+      padding: 40px 20px;
+      text-align: center;
     }
-
-    input[type="email"] {
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #e2e2e2;
+    }
+    p {
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    .cta-box {
+      background: #1c1f26;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    input, textarea {
+      width: 100%;
       padding: 12px;
+      margin: 8px 0;
+      background: #1a1d23;
+      border: 1px solid #333;
       border-radius: 6px;
-      border: none;
-      outline: none;
-      width: 280px;
-      font-size: 1rem;
-      background-color: #1a1f2b;
-      color: white;
+      color: #fff;
     }
-
-    input[type="email"]::placeholder {
-      color: #888;
-    }
-
     button {
-      padding: 12px 20px;
+      background: #0077ff;
+      color: white;
       border: none;
+      padding: 12px 25px;
       border-radius: 6px;
-      background-color: #00ff9d;
-      color: #0b0f1a;
-      font-weight: bold;
       cursor: pointer;
       font-size: 1rem;
-      transition: background-color 0.3s ease;
+      margin-top: 10px;
     }
-
-    button:hover {
-      background-color: #00d78a;
-    }
-
     footer {
-      position: absolute;
-      bottom: 20px;
+      background: #0d0e12;
+      text-align: center;
+      padding: 20px;
+      color: #666;
       font-size: 0.9rem;
-      color: #555;
-    }
-
-    @media (max-width: 600px) {
-      input[type="email"], button {
-        width: 90%;
-      }
     }
   </style>
 </head>
 <body>
 
-  <div class="logo">AQX Capital</div>
-  <div class="subtitle">Hedge Fund · Asset Intelligence · Performance</div>
-  <div class="notice">
-    Nuestro sitio web está actualmente en construcción.<br>
-    Muy pronto estaremos en línea con estrategias, resultados y visión de mercado.
-  </div>
+  <header>
+    <h1>AQX Capital</h1>
+    <p>Inversión basada en datos, visión y convicción</p>
+  </header>
 
-  <form action="https://formspree.io/f/xldlnppq" method="POST">
-    <input type="email" name="email" placeholder="Tu correo electrónico" required />
-    <button type="submit">Quiero recibir información</button>
-  </form>
+  <section>
+    <h2>Quiénes Somos</h2>
+    <p>Nacimos con el objetivo de construir una nueva forma de invertir. Identificamos oportunidades con fundamentos sólidos en sectores como inteligencia artificial, fintech, energía limpia y software.</p>
 
-  <footer>&copy; 2025 AQX Capital. Todos los derechos reservados.</footer>
+    <h2>Estrategia de Inversión</h2>
+    <p>Utilizamos modelos cuantitativos propietarios, análisis fundamental riguroso y monitoreo en tiempo real para detectar ineficiencias en los mercados públicos y privados.</p>
+
+    <h2>Relación con Inversionistas</h2>
+    <p>Colaboramos con family offices, instituciones y fundadores que entienden que el alpha requiere visión a largo plazo. Ofrecemos acceso a vehículos privados, estrategias líquidas y coinversiones.</p>
+
+    <h2>Visibilidad Total</h2>
+    <p>Proveemos a nuestros inversionistas una plataforma exclusiva con seguimiento en tiempo real, métricas de rendimiento y reportes frecuentes. Transparencia como estándar.</p>
+
+    <h2>Tecnología</h2>
+    <p>Infraestructura cloud-native, APIs financieras y sistemas propios que permiten escalar procesos de análisis, backtesting y ejecución con eficiencia institucional.</p>
+
+    <div class="cta-box">
+      <h2>¿Quieres construir el futuro con nosotros?</h2>
+      <p>Déjanos tus datos y te contactaremos pronto.</p>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Nombre completo" required />
+        <input type="email" name="email" placeholder="Correo electrónico" required />
+        <textarea name="message" placeholder="Mensaje o consulta" rows="5"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 AQX Capital. Todos los derechos reservados.
+  </footer>
 
 </body>
 </html>
+
 
 
 
