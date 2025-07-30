@@ -2,89 +2,115 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AQX Capital | Próximamente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQX | Inversión Inteligente</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #121212;
-      color: #bbb;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #ccc;
     }
-    .container {
-      background-color: #1e1e1e;
-      padding: 2.5rem 3rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    header {
+      background-color: #111;
+      color: #ccc;
+      padding: 2rem;
       text-align: center;
-      max-width: 400px;
-      width: 100%;
     }
-    h2 {
-      color: #f0f0f0;
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h1 {
       margin-bottom: 0.5rem;
-      font-weight: 700;
-      font-size: 1.8rem;
     }
     p {
-      color: #bbb;
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.4;
+      line-height: 1.6;
+    }
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-items: center;
     }
     input[type="email"] {
-      width: 100%;
-      padding: 12px 15px;
+      padding: 0.5rem;
       font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #444;
-      background-color: #2a2a2a;
-      color: #eee;
-      outline: none;
-      transition: border-color 0.3s ease;
-      box-sizing: border-box;
-    }
-    input[type="email"]:focus {
-      border-color: #555;
+      border: 1px solid #555;
+      border-radius: 4px;
+      background-color: #222;
+      color: #ccc;
+      width: 250px;
     }
     button {
-      margin: 1rem auto 0;
-      padding: 10px 30px;
-      background-color: #444;
+      padding: 0.5rem 1rem;
+      background-color: #bfff00;
+      color: #000;
       border: none;
-      border-radius: 8px;
-      color: #ddd;
-      font-weight: 600;
-      font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      display: block;
-      width: fit-content;
+      border-radius: 4px;
+      font-size: 1rem;
     }
-    button:hover {
-      background-color: #666;
+    .faq-section {
+      margin-top: 3rem;
+    }
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #444;
+    }
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 0.5rem 0;
+    }
+    .faq-answer {
+      display: none;
+      padding-bottom: 0.5rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>AQX</h2>
-    <p>En AQX implementamos estrategias de inversión basadas en decisiones estructuradas, análisis cuantitativo y automatización, para ofrecer a nuestros inversionistas resultados consistentes y adaptativos.</p>
+  <header>
+    <h1>AQX</h1>
+    <p>Inversión estructurada, análisis cuantitativo y automatización</p>
+  </header>
+  <main>
+    <p>En AQX diseñamos estrategias de inversión combinando decisión estructurada, análisis cuantitativo y tecnología. Próximamente lanzaremos nuestro servicio. Únete a la lista de espera para recibir acceso exclusivo.</p>
 
-    <p>Sea el primero en recibir información exclusiva sobre nuestro lanzamiento y oportunidades de inversión.</p>
-
-    <form action="https://formspree.io/f/xldlnppq" method="POST">
-      <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required />
-      <button type="submit">Notificarme</button>
+    <form action="mailto:aqx@email.com" method="post" enctype="text/plain">
+      <input type="email" name="email" placeholder="Ingresa tu correo" required>
+      <button type="submit">Unirme</button>
     </form>
-  </div>
+
+    <div class="faq-section">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-item">
+        <div class="faq-question">¿Qué tipo de inversiones realiza AQX?</div>
+        <div class="faq-answer">AQX invierte tanto en mercados públicos como privados, utilizando modelos cuantitativos para tomar decisiones coherentes y adaptativas.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Cuándo estará disponible el servicio?</div>
+        <div class="faq-answer">Estamos en etapa de desarrollo. Los primeros en unirse al waitlist recibirán información prioritaria y acceso preferente.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Puedo participar como inversionista individual?</div>
+        <div class="faq-answer">Sí. En el lanzamiento se abrirá una etapa piloto donde aceptaremos perfiles individuales y corporativos interesados en participar.</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
-
 
 
 
